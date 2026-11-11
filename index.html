@@ -1,60 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A little surprise for you ♡</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8eee9">
+<title>The Universe I Made for You ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;color:#fff2f5;font-family:Georgia,serif;background:radial-gradient(circle at 20% 15%,#77334e 0,transparent 34%),radial-gradient(circle at 85% 80%,#49223f 0,transparent 38%),linear-gradient(135deg,#160d19,#321323 55%,#170d1b)}
-.card{width:min(100%,440px);padding:40px 28px;text-align:center;border:1px solid #ffbed044;border-radius:28px;background:#ffffff12;box-shadow:0 24px 80px #0006}
-.tiny{color:#ffadc2;letter-spacing:4px;text-transform:uppercase;font:11px Arial,sans-serif}
-h1{font-size:clamp(29px,7vw,38px);line-height:1.15;margin:18px 0 12px;font-weight:500}
-p{color:#e9cbd5;line-height:1.7;font:14px/1.7 Arial,sans-serif}
-input{width:100%;margin:20px 0 12px;padding:15px;border-radius:13px;border:1px solid #ffbed066;background:#14081180;color:white;text-align:center;font-size:18px;letter-spacing:2px;outline:none}
-button{width:100%;padding:15px;border:0;border-radius:13px;cursor:pointer;background:linear-gradient(100deg,#ff9bb5,#e96b91);color:#351321;font-weight:bold;font-size:15px}
-#error{min-height:20px;color:#ffadc2;font:12px Arial,sans-serif;margin-top:10px}
-#reveal{display:none}
-.big-heart{font-size:48px;margin:12px 0;color:#ff9eb9}
-.message{font-size:clamp(27px,7vw,39px);color:#ffd2de;line-height:1.35;margin:15px 0}
-.signature{color:#ff9eb9;font-style:italic;font-size:18px}
-</style>
-</head>
-<body>
-<main class="card">
-  <section id="lock">
-    <div class="tiny">just for you · ♡</div>
-    <h1>A little surprise<br>is waiting...</h1>
-    <p>There’s a tiny secret behind this door.<br>Enter the password to open it.</p>
-    <form id="unlockForm">
-      <input id="password" type="password" inputmode="numeric" placeholder="Enter the secret password" autocomplete="off" aria-label="Password">
-      <button type="submit">Unlock my surprise ♡</button>
-    </form>
-    <div id="error" role="status"></div>
-  </section>
-  <section id="reveal">
-    <div class="tiny">the secret is...</div>
-    <div class="big-heart">♥</div>
-    <div class="message">Mohamed loves you<br>ya hob hayatiiiii</div>
-    <div class="signature">More than words can say ♡</div>
-    <p>You’re my favorite person, my sweetest thought, and the reason behind this little smile.</p>
-  </section>
-</main>
+:root{--cream:#f8eee8;--paper:#fffaf6;--wine:#762638;--rose:#b96b79;--gold:#c9a36b;--ink:#63494a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',serif}button,input{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}
+.hidden{display:none!important}.script{font-family:'Great Vibes',cursive;color:var(--wine);font-weight:400}
+.screen{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding:35px 20px;background:radial-gradient(ellipse at 50% 35%,#fffdfb 0,#f8eee8 55%,#ead8ce 100%)}
+.screen:before{content:"";position:absolute;inset:13px;border:1px solid #c9a36b88;pointer-events:none}
+.glow{position:absolute;width:320px;height:320px;border-radius:50%;filter:blur(80px);opacity:.23;background:#d99ba4;pointer-events:none}.glow.a{top:-150px;left:-120px}.glow.b{bottom:-160px;right:-120px;background:#d7b77d}
+.center{position:relative;text-align:center;width:min(100%,720px);padding:35px 12px}
+.eyebrow{text-transform:uppercase;letter-spacing:.34em;font-size:11px;color:#a77b58}.heart{font-size:30px;color:var(--rose);animation:pulse 2s infinite}
+h1.script{font-size:clamp(65px,13vw,112px);line-height:1.02;margin:17px 0 12px}.amp{display:block;font:italic .53em 'Cormorant Garamond',serif;color:#bd7b7c}
+.quote{font-size:clamp(21px,4vw,28px);font-style:italic;line-height:1.5;color:#69494b}.btn{display:inline-block;border:0;border-radius:99px;padding:14px 27px;background:linear-gradient(135deg,#9d4053,#702033);color:#fff9f4;letter-spacing:.13em;text-transform:uppercase;font-size:11px;text-decoration:none;box-shadow:0 10px 28px #79283a35;transition:.25s;cursor:pointer}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #79283a48}.btn.ghost{background:transparent;color:var(--wine);border:1px solid #b65c7080;box-shadow:none}
+input{width:min(100%,300px);padding:13px 18px;border:1px solid #c9a9a0;border-radius:99px;background:#fffaf6;text-align:center;color:var(--wine);outline:none;margin:12px 0}.error{min-height:22px;color:#a52c43}
+nav{position:sticky;top:0;z-index:20;background:#fbf3ebed;backdrop-filter:blur(12px);border-bottom:1px solid #c6a16b55;display:flex;justify-content:center;gap:clamp(10px,3vw,24px);padding:12px 8px;flex-wrap:wrap}nav a{font-size:13px;color:var(--wine);text-decoration:none}
+.hero{min-height:78svh}.content{max-width:1020px;margin:auto;padding:80px 20px;text-align:center;scroll-margin-top:65px}.section-title{font:clamp(45px,7vw,58px) 'Great Vibes',cursive;color:var(--wine);margin:0 0 8px}.intro{font-size:20px;color:#8a6668;max-width:680px;margin:0 auto 30px}
+.paper{max-width:740px;margin:auto;padding:35px clamp(22px,5vw,58px);background:var(--paper);border:1px solid #c6a16b88;box-shadow:0 18px 45px #6b354014;line-height:1.75;font-size:21px;text-align:left;position:relative}.paper:before{content:"♡";display:block;text-align:center;font-size:30px;color:var(--rose)}.paper p{margin:12px 0}
+.chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}.chapter{padding:25px 16px;background:linear-gradient(145deg,#fffaf6,#f2e3db);border:1px solid #c6a16b70;box-shadow:0 12px 28px #6b354012;min-height:190px}.chapter .symbol{font-size:34px}.chapter h3{font:30px 'Great Vibes',cursive;color:var(--wine);margin:8px 0}.chapter p{font-size:17px;margin:0;color:#806568}
+.journey{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}.chapter-song{background:var(--paper);border:1px solid #c6a16b88;box-shadow:0 12px 30px #6b354012;padding:25px;position:relative;overflow:hidden}.chapter-song:after{content:"♡";position:absolute;right:13px;top:0;font-size:70px;color:#b96b791b}.chapter-song .tag{font-size:10px;letter-spacing:.22em;color:#a77b58;text-transform:uppercase}.chapter-song h3{font:34px 'Great Vibes',cursive;color:var(--wine);margin:8px 0 0}.chapter-song .artist{color:#a06e70;margin:0 0 12px;font-size:15px}.chapter-song p{font-size:19px;line-height:1.5;position:relative;z-index:1}.chapter-song a{position:relative;z-index:1}
+.promise{background:linear-gradient(145deg,#fffaf6,#f1dfd7);border:1px solid #c6a16b88;padding:42px 24px;max-width:780px;margin:auto;box-shadow:0 20px 55px #6b354018}.promise h2{font:clamp(48px,9vw,76px) 'Great Vibes',cursive;color:var(--wine);margin:8px 0}.promise p{font-size:22px;line-height:1.6}
+footer{text-align:center;padding:35px 15px;color:#9b7775;letter-spacing:.16em;font-size:12px}.petal{position:fixed;top:-30px;z-index:30;pointer-events:none;color:#a8324a;opacity:.35;animation:fall linear infinite}.corner{position:absolute;font-size:clamp(40px,8vw,80px);opacity:.68;filter:drop-shadow(0 8px 9px #6d1c2520);pointer-events:none}.left{left:2%;top:8%;transform:rotate(-25deg)}.right{right:2%;bottom:7%;transform:rotate(22deg)}
+@keyframes pulse{50%{transform:scale(1.18)}}@keyframes fall{to{transform:translate(70px,110vh) rotate(360deg)}}@media(max-width:700px){.chapters{grid-template-columns:1fr 1fr}.journey{grid-template-columns:1fr}.content{padding:62px 16px}.paper{font-size:19px}.corner{opacity:.25}}@media(max-width:420px){.chapters{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* Finishing touches: envelope, music players, and the final surprise */
+.envelope-wrap{max-width:740px;margin:0 auto 24px;text-align:center}
+.envelope-hint{font-size:18px;color:#987276;margin:0 0 18px}
+.envelope{position:relative;width:min(100%,420px);height:260px;margin:0 auto 16px;cursor:pointer;perspective:1000px;outline:none}
+.envelope-back{position:absolute;inset:35px 0 0;background:#d9aeb0;border:1px solid #bd858d;border-radius:5px;box-shadow:0 18px 35px #6b35401c}
+.envelope-letter{position:absolute;z-index:2;left:7%;width:86%;height:205px;top:25px;padding:22px 18px;background:#fffaf6;border:1px solid #d9c2ad;box-shadow:0 8px 24px #6b354018;display:grid;place-items:center;transition:transform 1s cubic-bezier(.2,.75,.2,1),top 1s;overflow:hidden}
+.envelope-letter span{font:34px 'Great Vibes',cursive;color:var(--wine)}
+.envelope-front{position:absolute;z-index:3;inset:35px 0 0;background:linear-gradient(145deg,#c98791,#b96b79);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:0 0 5px 5px}
+.envelope-flap{position:absolute;z-index:4;left:0;right:0;top:35px;height:130px;background:linear-gradient(145deg,#e7c2bc,#cf9298);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease;filter:drop-shadow(0 3px 2px #6b354018)}
+.envelope-seal{position:absolute;z-index:5;left:50%;top:126px;transform:translateX(-50%);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#8c3448;color:#fff1e9;border:2px solid #e4c18b;box-shadow:0 3px 12px #70203344;transition:opacity .3s}
+.envelope.open .envelope-flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .envelope-letter{top:-28px;transform:translateY(-35px);height:245px}
+.envelope.open .envelope-seal{opacity:0}
+.envelope:focus-visible{filter:drop-shadow(0 0 5px #b96b79)}
+.letter-hidden{display:none}
+.envelope-open-note{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#a77b58;min-height:22px}
+.song-player{width:100%;margin:15px 0 8px;accent-color:#8b3448}
+.song-file-note{font-size:13px!important;color:#987276!important;margin:5px 0 12px!important}
+.final-screen{min-height:100svh;background:radial-gradient(ellipse at 50% 40%,#48212e 0,#24141d 68%,#160e14 100%);color:#fff2e9;display:grid;place-items:center;position:relative;overflow:hidden;padding:55px 20px;text-align:center}
+.final-screen:before{content:"";position:absolute;inset:13px;border:1px solid #c9a36b88;pointer-events:none}
+.final-inner{position:relative;max-width:800px;animation:finalRise 1.3s ease both}
+.final-screen .eyebrow{color:#d9b98c}
+.final-quote{font:italic clamp(29px,5.5vw,48px)/1.45 'Cormorant Garamond',serif;color:#fff3e9;margin:24px auto;max-width:760px}
+.final-sign{font:48px 'Great Vibes',cursive;color:#e7b5b7;margin-top:28px}
+.final-heart{font-size:34px;color:#e7a3ae;animation:pulse 2s infinite}
+@keyframes finalRise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:500px){.envelope{height:230px}.envelope-letter{height:180px}.envelope.open .envelope-letter{height:220px}.envelope-flap{height:115px}.envelope-seal{top:113px}}
+
+</style></head><body>
+<div id="welcome" class="screen"><div class="glow a"></div><div class="glow b"></div><div class="corner left">🌹</div><div class="corner right">🌹</div><div class="center"><div class="heart">♡</div><p class="eyebrow">A secret world, made only for you</p><h1 class="script">kotyy <span class="amp">&</span> janjontyy</h1><p class="eyebrow">P R E S E N T S</p><p class="quote">The universe I made for you</p><p class="quote" style="font-size:19px">A little journey through my heart, one chapter at a time.</p><button class="btn" onclick="showLock()">Enter our universe ♡</button><p class="eyebrow" style="margin-top:27px">Turn the page, my love</p></div></div>
+<div id="lock" class="screen hidden"><div class="glow a"></div><div class="center"><div class="heart">♡</div><p class="eyebrow">A key only you know</p><h2 class="script" style="font-size:57px;margin:8px">Before you enter...</h2><p class="quote">What is the little secret that unlocks our universe?</p><form onsubmit="unlock(event)"><input id="pass" type="password" placeholder="Our password" autocomplete="off"><br><button class="btn">Unlock my heart ♡</button></form><p class="error" id="error"></p><button class="btn ghost" onclick="back()">Back</button></div></div>
+<div id="site" class="hidden"><nav><a href="#letter">The letter</a><a href="#chapters">Our future</a><a href="#songs">Our soundtrack</a><a href="#promise">Forever</a></nav>
+<header class="screen hero"><div class="glow a"></div><div class="glow b"></div><div class="center"><div class="heart">♡</div><p class="eyebrow">Chapter one begins here</p><h1 class="script">For my janjontyy</h1><p class="quote">If I could give you one thing in this world, it would be the ability to see yourself through my eyes.</p><a class="btn" href="#letter">Read my heart ↓</a></div></header>
+<section class="content" id="letter">
+<p class="eyebrow">A letter from kotyy</p>
+<h2 class="section-title">A little something, sealed with love</h2>
+<p class="intro">I wanted you to open this the way you would open a letter made just for you.</p>
+<div class="envelope-wrap">
+  <div class="envelope" id="loveEnvelope" role="button" tabindex="0" aria-label="Open the love letter" onclick="openEnvelope()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openEnvelope()}">
+    <div class="envelope-back"></div>
+    <div class="envelope-letter"><span>For my janjontyy ♡</span></div>
+    <div class="envelope-front"></div>
+    <div class="envelope-flap"></div>
+    <div class="envelope-seal">♡</div>
+  </div>
+  <p class="envelope-open-note" id="envelopeNote">Tap the envelope to open your letter</p>
+</div>
+<article class="paper letter-hidden" id="loveLetter">
+<p>My sweetest janjontyy,</p>
+<p>Sometimes I wish I could pause the world for a moment and show you what you mean to me. Maybe then you would understand how your smallest words can change my whole day, how your smile stays in my mind, and how grateful I am that life brought you into mine.</p>
+<p>I don't want to love only the easy parts of life with you. I want to know you more deeply, understand you even when words are difficult, celebrate your happiest moments, and be beside you when the days feel heavy. I know neither of us is perfect, and I don't expect us to be. I just want something honest, gentle, and real — something we keep taking care of together.</p>
+<p>This little universe is my way of saying that you matter to me in ways I may never fully explain. And if you ever forget, come back here and let these words remind you.</p>
+<p>All my love,<br><span class="script" style="font-size:43px">Your kotyy ♡</span></p>
+</article>
+</section>
+<section class="content" id="chapters"><p class="eyebrow">Not memories yet — promises of memories</p><h2 class="section-title">The chapters we'll write</h2><p class="intro">We don't have our photo album yet. That's the beautiful part: the pages are waiting for us to fill them with real moments, real laughter, and stories only we will understand.</p><div class="chapters">
+<article class="chapter"><div class="symbol">🌅</div><h3>Our first adventures</h3><p>New places, spontaneous plans, long walks, and the little trips that turn into our favorite stories.</p></article>
+<article class="chapter"><div class="symbol">☕</div><h3>Ordinary magic</h3><p>Morning messages, late-night talks, silly jokes, and being happy doing absolutely nothing together.</p></article>
+<article class="chapter"><div class="symbol">🌍</div><h3>Places to discover</h3><p>Different streets, new cities, beautiful views, and a thousand places we haven't seen yet.</p></article>
+<article class="chapter"><div class="symbol">🎂</div><h3>Days to celebrate</h3><p>Birthdays, anniversaries, little surprises, and dates that become part of our story.</p></article>
+<article class="chapter"><div class="symbol">🫶</div><h3>Growing together</h3><p>Learning each other, becoming better, saying sorry, forgiving, and choosing kindness.</p></article>
+<article class="chapter"><div class="symbol">🏡</div><h3>Our someday</h3><p>A home full of peace, warmth, laughter, and the comfort of knowing we're together.</p></article></div></section>
+<section class="content" id="songs"><p class="eyebrow">Twelve songs · twelve little pieces of my heart</p><h2 class="section-title">The soundtrack of us</h2><p class="intro">Some feelings are easier to send through a song. Each one has a little note from me to you.</p><div class="journey">
+<article class="chapter-song"><span class="tag">01 · The song you love</span><h3>Kelma</h3><p class="artist">Ramy Sabry</p><p>My love, I hope this song reminds you how special you are to me. Not because of one big thing, but because of all the little things that make you who you are. Your voice, your laugh, your way of making an ordinary moment stay in my mind. I love all those little pieces of you. ♡</p><audio class="song-player" controls preload="none" src="audio/kelma.mp3"  aria-label="Play kelma"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/kelma.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Ramy%20Sabry%20Kelma">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">02 · The day our story began</span><h3>Ehsasy M3ak</h3><p class="artist">Ramy Sabry</p><p>I think about the day we got to know each other and smile. I had no idea that one day would become such an important part of my life. I didn't know how much a conversation could change my days, or how someone could slowly become the person I most want to tell everything to. I'm so glad our paths crossed. ♡</p><audio class="song-player" controls preload="none" src="audio/ehsasy-m3ak.mp3"  aria-label="Play ehsasy m3ak"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/ehsasy-m3ak.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Ramy%20Sabry%20Ehsasy%20M3ak">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">03 · When you miss me</span><h3>Arabny Leik</h3><p class="artist">Ramy Sabry</p><p>When you miss me, let this song make the distance feel a little smaller. Imagine my hand holding yours and remember that even when I'm not right beside you, you're never far from my thoughts. I hope it feels like a warm hug until I can give you a real one. ♡</p><audio class="song-player" controls preload="none" src="audio/arabny-leik.mp3"  aria-label="Play arabny leik"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/arabny-leik.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Ramy%20Sabry%20Arabny%20Leik">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">04 · Our wedding day</span><h3>El Leila</h3><p class="artist">Amr Diab</p><p>One day, I hope this is the song playing when I look at you on our wedding day. I want to see you smiling, take your hand, and remember the little website where I first wrote down this dream. I don't know what every detail of that day will look like, but I know how beautiful it would be to share it with you. 💍</p><audio class="song-player" controls preload="none" src="audio/el-leila.mp3"  aria-label="Play el leila"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/el-leila.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Amr%20Diab%20El%20Leila">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">05 · A song you love</span><h3>W Betir</h3><p class="artist">Ziad Bourji</p><p>Some songs remind me that love is found in the details. I hope this one makes you smile and remember that I want to keep discovering life with you — the exciting moments, the quiet ones, and everything in between. Let's keep collecting reasons to be happy together. ♡</p><audio class="song-player" controls preload="none" src="audio/w-betir.mp3"  aria-label="Play w betir"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/w-betir.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Ziad%20Bourji%20W%20Betir">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">06 · When everything feels ordinary</span><h3>El Kalam Kolo Aady</h3><p class="artist">Ramy Sabry</p><p>Even when life gets busy and everything feels like the usual routine, I never want us to take each other for granted. Let's keep making time to talk, laugh, listen, and remind each other why this matters. The little things are what make our story ours. ♡</p><audio class="song-player" controls preload="none" src="audio/el-kalam-kolo-aady.mp3"  aria-label="Play el kalam kolo aady"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/el-kalam-kolo-aady.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Ramy%20Sabry%20El%20Kalam%20Kolo%20Aady">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">07 · Just the way you are</span><h3>Zayek</h3><p class="artist">Massar Egbari</p><p>I don't want a perfect version of you. I want you — your real laugh, your little habits, your dreams, your worries, your strong days, and the days you need a little extra love. You never have to pretend to be someone else with me. I want to keep knowing the real you. ♡</p><audio class="song-player" controls preload="none" src="audio/zayek.mp3"  aria-label="Play zayek"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/zayek.mp3</strong> to the website folder to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Massar%20Egbari%20Zayek%20Massar%20Egbari">Find the song ↗</a></article>
+
+<article class="chapter-song"><span class="tag">08 · The way I see you</span><h3>Einy W Ana Shayfo</h3><p class="artist">Amr Diab</p><p>Every time I see you, I find another reason to fall for you. You make even the simplest moments feel beautiful. ♡</p><audio class="song-player" controls preload="none" src="audio/einy-w-ana-shayfo.mp3" aria-label="Play Einy W Ana Shayfo"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/einy-w-ana-shayfo.mp3</strong> to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Amr%20Diab%20Einy%20W%20Ana%20Shayfo">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">09 · A promise from my heart</span><h3>Waadtak Men Alby</h3><p class="artist">Amr Diab</p><p>My promise isn't just words. I want to show you, in all the little ways, that my heart is choosing you. ♡</p><audio class="song-player" controls preload="none" src="audio/waadtak-men-alby.mp3" aria-label="Play Waadtak Men Alby"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/waadtak-men-alby.mp3</strong> to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Amr%20Diab%20Waadtak%20Men%20Alby">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">10 · A song from my heart</span><h3>Men Alby Baghanny</h3><p class="artist">Mohamed Hamaki</p><p>If my heart could sing everything it feels for you, I think it would sound a little like this. ♡</p><audio class="song-player" controls preload="none" src="audio/men-alby-baghanny.mp3" aria-label="Play Men Alby Baghanny"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/men-alby-baghanny.mp3</strong> to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Mohamed%20Hamaki%20Men%20Alby%20Baghanny">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">11 · Always with you</span><h3>Tammly Maak</h3><p class="artist">Amr Diab</p><p>Wherever life takes us, I want to keep making memories with you. The best place is wherever we are together. ♡</p><audio class="song-player" controls preload="none" src="audio/tammly-maak.mp3" aria-label="Play Tammly Maak"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/tammly-maak.mp3</strong> to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Amr%20Diab%20Tammly%20Maak">Find the song ↗</a></article>
+<article class="chapter-song"><span class="tag">12 · More precious than anything</span><h3>Aghla Men Omry</h3><p class="artist">Amr Diab</p><p>You are one of the most precious parts of my life. I hope you never forget how deeply you are loved. ♡</p><audio class="song-player" controls preload="none" src="audio/aghla-men-omry.mp3" aria-label="Play Aghla Men Omry"></audio><p class="song-file-note">Your song player is ready. Add <strong>audio/aghla-men-omry.mp3</strong> to enable playback.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Amr%20Diab%20Aghla%20Men%20Omry">Find the song ↗</a></article>
+</div></section>
+<section class="content" id="promise"><div class="promise"><div class="heart">♡</div><p class="eyebrow">The promise I want you to remember</p><h2>Till the end, together</h2><p>Janjontyy, I can't promise that life will always be easy. There may be days when we're tired, when plans change, when we misunderstand each other, or when the world feels heavier than usual. But I want you to know that I don't want to disappear when things get difficult. I want to sit beside you, listen, talk things through, and find our way forward together.</p><p>I want to celebrate your wins as if they were mine, support your dreams, hold your hand through the uncertain moments, and keep learning how to love you better. We are two people, and we'll both make mistakes. What matters to me is that we keep choosing honesty, patience, respect, and each other.</p><p>Whatever happens, wherever life takes us, I want us to face it as a team. Not only on the perfect days. Not only when everything is easy. I want to keep choosing us, again and again, till the end. ♡</p></div></section>
+<section class="content" id="wedding"><div class="promise"><div class="heart">💍</div><p class="eyebrow">A dream I'm saving for one day</p><h2>When I see you in white</h2><p>One day, when <i>El Leila</i> is playing and I see you walking toward me, I hope I remember this little beginning — the messages, the laughs, the songs, and this tiny universe I made just to tell you how much you mean to me.</p><p>I want to look at you and feel grateful for every chapter that brought us there. I want to promise you a life where we keep talking, keep laughing, keep growing, and never stop being on the same side.</p><p>Until that day, let's write our story with care. One day at a time, one memory at a time, together.</p><p class="script" style="font-size:48px">Your kotyy, dreaming of forever ♡</p></div></section>
+<section class="content" id="last-surprise">
+<div class="promise">
+<div class="heart">♡</div>
+<p class="eyebrow">One last little surprise</p>
+<h2>Before you go...</h2>
+<p>There is one more thing I want you to keep with you.</p>
+<button class="btn" onclick="revealForever()">Open your final surprise ♡</button>
+</div>
+</section>
+<section id="foreverScreen" class="final-screen hidden" aria-live="polite">
+<div class="final-inner">
+<div class="final-heart">♡</div>
+<p class="eyebrow">For every lifetime, in every universe</p>
+<p class="final-quote">“And if I had to live this life a thousand times, I'd still hope to find you in every single one.” ❤️</p>
+<div class="final-sign">Your kotyy, always ♡</div>
+<p style="color:#d9b9b2;font-size:17px;margin-top:22px">kotyy & janjontyy · our little universe</p>
+<button class="btn ghost" style="color:#fff1e9;border-color:#e7b5b780;margin-top:22px" onclick="backToStory()">Stay in our universe</button>
+</div>
+</section>
+<footer>made with all my love · kotyy & janjontyy ♡</footer></div>
 <script>
-(function () {
-  const correctPassword = "13092026";
-  const form = document.getElementById("unlockForm");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const enteredPassword = document.getElementById("password").value.trim();
-    if (enteredPassword === correctPassword) {
-      document.getElementById("lock").style.display = "none";
-      document.getElementById("reveal").style.display = "block";
-    } else {
-      document.getElementById("error").textContent = "Try again, my love ♡";
-    }
-  });
-})();
-</script>
-</body>
-</html>
+const SECRET_PASSWORD="ourlittleuniverse";
+function showLock(){document.getElementById('welcome').classList.add('hidden');document.getElementById('lock').classList.remove('hidden');document.getElementById('pass').focus()}
+function back(){document.getElementById('lock').classList.add('hidden');document.getElementById('welcome').classList.remove('hidden')}
+
+function openEnvelope(){
+  const env=document.getElementById('loveEnvelope');
+  const letter=document.getElementById('loveLetter');
+  const note=document.getElementById('envelopeNote');
+  env.classList.add('open');
+  note.textContent='A letter, written only for you ♡';
+  window.setTimeout(()=>{letter.classList.remove('letter-hidden');letter.scrollIntoView({behavior:'smooth',block:'start'});},650);
+}
+function revealForever(){
+  document.querySelectorAll('#site > *:not(#foreverScreen)').forEach(el=>el.classList.add('hidden'));
+  document.getElementById('foreverScreen').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function backToStory(){
+  document.getElementById('foreverScreen').classList.add('hidden');
+  document.querySelectorAll('#site > *:not(#foreverScreen)').forEach(el=>el.classList.remove('hidden'));
+  document.getElementById('last-surprise').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function unlock(e){e.preventDefault();const p=document.getElementById('pass');if(p.value.trim()===SECRET_PASSWORD){document.getElementById('lock').classList.add('hidden');document.getElementById('site').classList.remove('hidden');window.scrollTo(0,0)}else{document.getElementById('error').textContent='Not quite, my love. Try again ♡';p.value='';p.focus()}}
+for(let i=0;i<17;i++){const p=document.createElement('span');p.className='petal';p.textContent=i%2?'♥':'✿';p.style.left=Math.random()*100+'vw';p.style.animationDuration=(15+Math.random()*15)+'s';p.style.animationDelay=(-Math.random()*25)+'s';p.style.fontSize=(9+Math.random()*12)+'px';document.body.appendChild(p)}
+</script></body></html>
